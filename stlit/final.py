@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-df = pd.read_csv("maro_cleand.csv")
+df = pd.read_csv("stlit/maro_cleand.csv")
 st.title('gkc')
 popi= df[df[["Place of Residence"]] != "na" ]
 yui=popi["Place of Residence"].value_counts().sort_values(ascending=False)
