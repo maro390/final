@@ -62,7 +62,7 @@ def main2():
     plt.title("tha most palces that gkc known from")
     plt.xticks(rotation=70)
     st.pyplot(plt)
-tab1, tab2, tab3 , tab4, tab5 = st.tabs(["Cat", "Dog", "Owl", "Rabbit", "Horse"])
+tab1, tab2, tab3 , tab4, tab5 = st.tabs(["part 1", "part 2", "part 3", "part 4", "part 5"])
 
 with tab1:
     st.header("tha most palces that gkc known from")
