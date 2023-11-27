@@ -73,12 +73,13 @@ with tab1:
 
 
 with tab2:
+    st.header("tha place that enroll in corse")
     choice = st.radio("Select one option:", xc.index)
     def ahmsd_mphsen(hmasa):
         x=df[df["Place of Residence"] == choice ]
         y=x[x["Place of Residence"] != "na" ]
         return y[f"{hmasa}"].sum()
-    st.header("A dog")
+    
     delivery(0.75)
     urt2=st.button("click            me")
     if urt2:
