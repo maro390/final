@@ -140,3 +140,98 @@ with tab5:
 
         # Display the chart
         st.pyplot(plt)
+
+st.title('bouns part')
+
+
+tab11,tab22,tab33,tab44,tab55 = st.tabs(["b1","b2","b3","b4","b5"])
+the_age=df["Academic Year"].value_counts().sort_values(ascending=False)
+with tab11:
+    st.header("What is the most level to enter the site?")
+    
+    rr3=st.button("click                  me")
+    if rr3:
+
+        
+
+    # Create the pie chart
+        plt.bar(the_age.index,the_age.values)
+
+        # Add a title
+        plt.title('Pie Chart')
+        plt.xticks(rotation=90)
+
+        # Display the chart
+        st.pyplot(plt)
+with tab22:
+    st.header("What are the relevant courses for each age")
+    hamra=st.radio("choice",the_age.index)
+    def ahmsd_mphsen(hmasa):
+        x=df[df["Academic Year"] == hamra ]
+        y=x[x["Academic Year"] != "na" ]
+        return y[f"{hmasa}"].sum()
+    delivery(.5)
+    ur3=st.button("click                    me")
+    if ur3:
+        plt.bar(labels, values)
+        plt.xlabel('Courses ')  # Add x-axis label
+        plt.ylabel('Count ')  # Add y-axis label
+        plt.title('Course Enrollment ')  # Add title
+        plt.xticks(rotation=90)
+
+    
+        st.pyplot(plt)
+the_sitee=df["Learned About Genius From"].value_counts().sort_values(ascending=False)
+with tab33:
+    st.header("The site where people come the most from")
+    
+    rr3=st.button("click                             me")
+    if rr3:
+
+        
+
+    # Create the pie chart
+        plt.bar(the_sitee.index,the_sitee.values)
+
+        # Add a title
+        plt.title('Pie Chart')
+        plt.xticks(rotation=90)
+
+        # Display the chart
+        st.pyplot(plt)
+with tab44:
+    st.header("The site where people come the most from")
+    hamraa=st.radio("choice",the_sitee.index)
+    def ahmsd_mphsen(hmasa):
+        x=df[df["Learned About Genius From"] == hamraa ]
+        y=x[x["Learned About Genius From"] != "na" ]
+        return y[f"{hmasa}"].sum()
+    delivery(.5)
+    ur3=st.button("click                                    me")
+    if ur3:
+        plt.bar(labels, values)
+        plt.xlabel('Courses ')  # Add x-axis label
+        plt.ylabel('Count ')  # Add y-axis label
+        plt.title('Course Enrollment ')  # Add title
+        plt.xticks(rotation=90)
+
+    
+        st.pyplot(plt)
+with tab55:
+    st.header("What is the most level to enter the site? from")
+    hamraaa=st.radio("choice    ",the_sitee.index)
+    x=df[df["Learned About Genius From"] == hamraaa ]
+    
+    homaa=x["Is Online Education Useful?"].value_counts()
+    
+    r3=st.button("click                                          me")
+    if r3:
+        
+    # Create the pie chart
+        plt.pie(homaa.values, labels=homaa.index, autopct='%1.1f%%')
+
+        # Add a title
+        plt.title('Pie Chart')
+
+        # Display the chart
+        st.pyplot(plt)
